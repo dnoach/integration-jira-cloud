@@ -413,13 +413,13 @@ class Tio2Jira:
             else:
                 return
 
-        if self.subtask:
+        """ if self.subtask:
             subissue['parent'] = {'key': i['key']}
             try:
                 self._jira.issues.upsert(fields=subissue, jql=' and '.join(sjql))
             except BadRequestError as err:
                 if not self.config['jira'].get('ignore_errors', False):
-                    sys.exit(2)
+                    sys.exit(2) """
 
     def _close_parent(self, parent):
         '''
